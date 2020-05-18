@@ -1,0 +1,13 @@
+name = "CoffeeBeetles"
+uuid = "9927b314-560b-4f5c-ae2a-379059c760a4"
+authors = ["yakir12"]
+version = "0.1.0"
+
+[compat]
+julia = "1.4.1"
+
+[extras]
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+
+[targets]
+test = ["Test"]
