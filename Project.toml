@@ -3,6 +3,33 @@ uuid = "9927b314-560b-4f5c-ae2a-379059c760a4"
 authors = ["yakir12"]
 version = "0.1.0"
 
+[deps]
+AbstractPlotting = "537997a7-5e4e-5d89-9595-2241ea00577e"
+AngleBetweenVectors = "ec570357-d46e-52ed-9726-18773498274d"
+CairoMakie = "13f3f980-e62b-5c42-98c6-ff1f3baf88f0"
+Colors = "5ae59095-9a9b-59fe-a467-6f913c188581"
+CoordinateTransformations = "150eb455-5306-5404-9cee-2592286d6298"
+DataFrames = "a93c6f00-e57d-5684-b7b6-d8193f3e46c0"
+DataStructures = "864edb3b-99cc-5e75-8d2d-829cb0a9cfe8"
+DelimitedFiles = "8bb1440f-4735-579b-a4ab-409b98df4dab"
+Distributions = "31c24e10-a181-5473-b8eb-7969acd0382f"
+DungAnalyse = "4b12b552-3a4e-596f-96c3-8d21d15d5d04"
+DungBase = "bd6f3a87-2f53-57d0-9c4e-5625ef189a5e"
+FileIO = "5789e2e9-d7fb-5bc7-8068-2c6fae9b9549"
+GLM = "38e38edf-8417-5370-95a0-9cbb8c7f171a"
+HypothesisTests = "09f84164-cd44-5f33-b23f-e6b0d136a0d5"
+LinearAlgebra = "37e2e46d-f89d-539d-b4ee-838fcccc9c8e"
+MakieLayout = "5a521ce4-ebb9-4793-b5b7-b334dfe8393c"
+Measurements = "eff96d63-e80a-5855-80a2-b1b0885c5ab7"
+Missings = "e1d29d7a-bbdc-5cf2-9ac0-f12de2c33e28"
+OnlineStats = "a15396b6-48d5-5d58-9928-6d29437db91e"
+Pkg = "44cfe95a-1eb2-52ea-b672-e2afdf69b78f"
+PrettyTables = "08abe8d2-0d0c-5749-adfa-8a2ac140af0d"
+Printf = "de0858da-6303-5e67-8744-51eddeeeb8d7"
+Rotations = "6038ab10-8711-5258-84ad-4b1120ba62dc"
+Serialization = "9e88b42a-f829-5b0c-bbe9-9e923198166b"
+StatsBase = "2913bbd2-ae8a-5f71-8c99-4fb6c76f3a91"
+
 [compat]
 julia = "1.4.1"
 
