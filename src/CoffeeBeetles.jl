@@ -2,7 +2,7 @@ module CoffeeBeetles
 
 export main
 
-using Serialization, DungBase, DungAnalyse
+using Serialization, DungBase
 
 using DataStructures, CoordinateTransformations, Rotations, DataFrames, Missings, Distributions, AngleBetweenVectors, LinearAlgebra, StatsBase, OnlineStats, Colors, PrettyTables, Measurements, HypothesisTests, GLM, DelimitedFiles, Printf
 
