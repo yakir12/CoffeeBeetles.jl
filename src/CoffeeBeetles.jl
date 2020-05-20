@@ -19,7 +19,8 @@ function main()
     data = deserialize(datafile)
     df = getdf(data)
     speeds!(df)
-    displaced_stats(df)
+    descriptive_stats(df)
+    displaced_stats(df) 
     save_figures(df)
 end
 

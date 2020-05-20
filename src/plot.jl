@@ -324,6 +324,6 @@ end
 function save_figures(df)
     # mkpath("figures")
     for figure in (:figure4, :figure5, :figure6, :figure7)
-        @eval FileIO.save($("$figure.pdf"), $figure(df))
+        @eval FileIO.save($("$figure.pdf"), $figure($df))
     end
 end

@@ -9,7 +9,7 @@ function descriptive_stats(df)
     sort!(d, [:nest_coverage, :group])
     select!(d, [1,2,4,5,3])
     mkpath("tables")
-    open(joinpath("tables", "table1.txt"), "w") do io
+    open("table1.txt", "w") do io
         pretty_table(io, d, ["Group" "Burrow coverage" "Turning point" "Gravity center" "n";
                                "" "" "μ ± σ" "μ ± σ" ""], 
                      hlines = [1,7],
@@ -43,7 +43,7 @@ function speeds!(df)
     println("speeds:")
     println(v)
     μ = mean(skipmissing(vcat(df.homing_speed, df.search_speed)))
-    @printf "mean speed is %s cm/s" μ
+    @printf "mean speed is %s cm/s\n" μ
 end
 
 
@@ -64,7 +64,7 @@ function displaced_stats(df)
         x2 = [r.centered for r in eachrow(data) if r.group ≠ "none"]
         tx = ApproximatePermutationTest(first.(x1), first.(x2), var, n)
         ty = ApproximatePermutationTest(last.(x1), last.(x2), var, n)
-        @printf "%i permutations sampled at random from %i possible permutations" n factorial(big(length(x1)+length(x2)))
+        @printf "%i permutations sampled at random from %i possible permutations\n" n factorial(big(length(x1)+length(x2)))
         σ = pvalue.([tx, ty], tail = :left)
         nσ = length(x1) + length(x2)
         @printf "Is the %s variance of the none group, (%i, %i) significantly smaller than the variancve of the displaced groups, (%i, %i)? P = (%.2g, %.2g) (n = %i)\n" replace(string(point), '_' => ' ') var(x1)... var(x2)... σ... nσ
