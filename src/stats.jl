@@ -8,7 +8,6 @@ function descriptive_stats(df)
     d = unstack(g, [:group, :nest_coverage, :nrow], :point_type, :point_xy)
     sort!(d, [:nest_coverage, :group])
     select!(d, [1,2,4,5,3])
-    mkpath("tables")
     open("table1.txt", "w") do io
         pretty_table(io, d, ["Group" "Burrow coverage" "Turning point" "Gravity center" "n";
                                "" "" "μ ± σ" "μ ± σ" ""], 
