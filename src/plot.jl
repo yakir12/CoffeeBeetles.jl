@@ -314,7 +314,7 @@ function figure4(df)
         point = Node(Point2f0(x, -10.0))
         topleft_ax2 = lift(getfield(MakieLayout, corner), ax2.scene.px_area)
         point_screenspace = lift(ax1.scene.camera.projectionview, ax1.scene.camera.pixel_space, point) do pv, pspace, point
-            projected = Point(AbstractPlotting.project(inv(pspace) * pv, point)[1:2]...) .+ AbstractPlotting.origin(ax1.scene.px_area[])
+            projected = Point2f0(AbstractPlotting.project(inv(pspace) * pv, point)[1:2]...) .+ AbstractPlotting.origin(ax1.scene.px_area[])
         end
         lines!(overlay, @lift([$point_screenspace, $topleft_ax2]), color = spinecolor)
     end
