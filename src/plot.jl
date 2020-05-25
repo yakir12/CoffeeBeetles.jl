@@ -311,7 +311,7 @@ function figure4(df)
     rowsize!(lo, 3, Aspect(2, 1))
     overlay = Scene(scene, camera = campixel!, raw = true)
     for (x, corner) in zip((-10.0, 10.0), (:topleft, :topright))
-        point = Node(Point(x, -10.0))
+        point = Node(Point2f0(x, -10.0))
         topleft_ax2 = lift(getfield(MakieLayout, corner), ax2.scene.px_area)
         point_screenspace = lift(ax1.scene.camera.projectionview, ax1.scene.camera.pixel_space, point) do pv, pspace, point
             projected = Point(AbstractPlotting.project(inv(pspace) * pv, point)[1:2]...) .+ AbstractPlotting.origin(ax1.scene.px_area[])
