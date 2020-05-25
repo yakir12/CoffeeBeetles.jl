@@ -78,14 +78,14 @@ getset(_::Missing, d) = d == "none" ? "Closed" : "Displacement"
 getset(_, __) = "Transfer"
 
 
-intended(d::AbstractString) =  d == "none" ? DungAnalyse.Point(0,0) :
-                d == "away" ? DungAnalyse.Point(0, -50) :
-                d == "towards" ? DungAnalyse.Point(0, 50) :
-                d == "right" ? DungAnalyse.Point(50, 0) :
-                d == "left" ? DungAnalyse.Point(-50, 0) :
-                d == "zero" ? DungAnalyse.Point(0, -130) :
-                d == "back" ? DungAnalyse.Point(0,0) :
-                d == "far" ? DungAnalyse.Point(0,0) :
+intended(d::AbstractString) =  d == "none" ? DungBase.Point(0,0) :
+                d == "away" ? DungBase.Point(0, -50) :
+                d == "towards" ? DungBase.Point(0, 50) :
+                d == "right" ? DungBase.Point(50, 0) :
+                d == "left" ? DungBase.Point(-50, 0) :
+                d == "zero" ? DungBase.Point(0, -130) :
+                d == "back" ? DungBase.Point(0,0) :
+                d == "far" ? DungBase.Point(0,0) :
                 error("unknown displacement")
 intended(d) = intended(string(d))
 
