@@ -30,6 +30,15 @@ and paste it in the newly opened Julia-terminal, press Enter
 3. The stats, tables, and figures have been generated in the current directory
 4. You can close the Julia-terminal after it's done running
 
+## Troubleshooting
+If you run into errors, it might be because of older versions polluting your general environment.
+Please try the following in a newly started Julia-terminal:
+```
+import Pkg
+Pkg.rm(collect(keys(Pkg.installed())))
+```
+restart Julia and follow the instructions above from the beginning.
+
 ## Citing
 
 See `CITATION.bib` for the relevant reference(s).
