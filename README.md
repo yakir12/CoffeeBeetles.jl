@@ -26,7 +26,7 @@ and paste it in the newly opened Julia-terminal, press Enter
 using CoffeeBeetles
 main()
 ```
-and paste it in the newly opened Julia-terminal, press Enter
+   and paste it in the newly opened Julia-terminal, press Enter
 3. The stats, tables, and figures have been generated in the current directory
 4. You can close the Julia-terminal after it's done running
 
