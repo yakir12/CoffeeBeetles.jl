@@ -15,6 +15,10 @@ include("preparedata.jl")
 include("stats.jl")
 include("plot.jl")
 
+"""
+    main()
+Create all the tables and figures included in the manuscript.
+"""
 function main()
     data = deserialize(datafile)
     df = getdf(data)
