@@ -33,7 +33,7 @@ and paste it in the newly opened Julia-terminal, press Enter
 ## Troubleshooting
 If you run into errors, it might be because of older versions polluting your general environment.
 Please try the following in a newly started Julia-terminal:
-```
+```julia
 import Pkg
 Pkg.rm(collect(keys(Pkg.installed())))
 ```
