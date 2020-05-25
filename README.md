@@ -39,6 +39,7 @@ Warning: julia version requirement for package CoffeeBeetles not satisfied
 You'll need to update your Julia to 1.4 or higher. 
 
 > Segfault
+
 Older versions are polluting your general environment. 
 Please try the following in a newly started Julia-terminal:
 ```julia
