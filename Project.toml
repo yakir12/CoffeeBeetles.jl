@@ -1,7 +1,7 @@
 name = "CoffeeBeetles"
 uuid = "9927b314-560b-4f5c-ae2a-379059c760a4"
 authors = ["yakir12"]
-version = "0.2.0"
+version = "0.3.0"
 
 [deps]
 AbstractPlotting = "537997a7-5e4e-5d89-9595-2241ea00577e"
