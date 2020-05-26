@@ -13,7 +13,6 @@ You need to do this step only once.
 3. Copy: 
    ```julia
    import Pkg
-   Pkg.activate(".")
    Pkg.add(Pkg.PackageSpec(url = "https://github.com/yakir12/CoffeeBeetles.jl"))
    ```
    and paste it in the newly opened Julia-terminal, press Enter
