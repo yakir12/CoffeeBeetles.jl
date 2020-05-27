@@ -7,16 +7,17 @@ A [Julia](https://julialang.org/) package for generating all the tables and figu
 [![Codecov](https://codecov.io/gh/yakir12/CoffeeBeetles.jl/branch/master/graph/badge.svg)](https://codecov.io/gh/yakir12/CoffeeBeetles.jl)
 
 ## How to install
-You need to do this step only once.
-1. If you haven't already, install [Julia](https://julialang.org/downloads/) -> you should be able to launch it (some icon on the Desktop or some such)
-2. Start Julia -> a Julia-terminal popped up
-3. Copy: 
+If you haven't already, install [Julia](https://julialang.org/downloads/) -> you should be able to launch it (some icon on the Desktop or some such). 
+1. Start Julia -> a Julia-terminal popped up
+2. Copy: 
    ```julia
    import Pkg
-   Pkg.add(Pkg.PackageSpec(url = "https://github.com/yakir12/CoffeeBeetles.jl"))
+   Pkg.Registry.add("General") # you may skip this line if this is not a fresh instalation of Julia and you've updated/added a packge before
+   Pkg.Registry.add(Pkg.RegistrySpec(url = "https://github.com/yakir12/DackeLab")) # you need to do this only once for each instalation of Julia
+   Pkg.add(Pkg.PackageSpec(url = "https://github.com/yakir12/CoffeeBeetles.jl")) # you need to do this only once for each environment
    ```
    and paste it in the newly opened Julia-terminal, press Enter
-4. You can close the Julia-terminal after it's done running
+3. You can close the Julia-terminal after it's done running
 
 ## How to use
 1. Start Julia -> a Julia-terminal popped up
@@ -30,18 +31,11 @@ You need to do this step only once.
 4. You can close the Julia-terminal after it's done running
 
 ## Troubleshooting
-1. When adding this package I got a
-   ```
-   Warning: julia version requirement for package CoffeeBeetles not satisfied
-   ```
-   You'll need to update your Julia to 1.4 or higher. 
-2. Older versions polluting your general environment.
-   Please try the following in a newly started Julia-terminal:
-   ```julia
-   import Pkg
-   Pkg.rm(collect(keys(Pkg.installed())))
-   ```
-   restart Julia and follow the instructions above from the beginning.
+When adding this package I got a
+```
+Warning: julia version requirement for package CoffeeBeetles not satisfied
+```
+You'll need to update your Julia to 1.4 or higher. 
 
 ## Citing
 
