@@ -11,6 +11,8 @@ import Base.Threads.@spawn
     @spawn rm(d, force = true, recursive = true)
 end
 todo = readdir(path)
+goodpath(x) = isdir(x) && !startswith(x, '.') && !isempty(readdir(x))
+filter!(goodpath, todo)
 n = length(todo)
 sources = Vector{Any}(undef, n)
 @sync for i in 1:n
